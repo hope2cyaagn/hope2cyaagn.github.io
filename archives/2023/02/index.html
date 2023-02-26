@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Hexo</title>
+  <title>Archives: 2023/2 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/archives/2023/02/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="John Doe">
@@ -152,212 +152,74 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-GitHub搭建Hexo博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/02/26/GitHub%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/">GitHub搭建Hexo博客</a>
-    </h1>
-  
-
-        
-        <a href="/2023/02/26/GitHub%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2023" class="archive-year">2023</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2023/02/26/GitHub%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
   	<time datetime="2023-02-26T07:17:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-26</time>
 </a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>根据<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yb411a7ty/?spm_id_from=333.999.0.0">codesheep的搭建Hexo博客</a>一步一步搭建，由于都是macOS，一切都很顺利，但是在最后部署至GitHub仓库时出现报错：</p>
-<p><img src="/2023/02/26/GitHub%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/1.png"></p>
-<p>在这里尝试了很多次，一直过于关注高亮Error中的内容，尝试了搜到常用解决Spawn faild的办法：</p>
-<ul>
-<li><p>删除.deploy_git&#x2F;文件夹</p>
-</li>
-<li><p>_config.yml中repo改为ssh地址</p>
-</li>
-</ul>
-<p>没有尝试强制上传的方法，但是以上两种方法后仍然Error：Spawn faild，都没有解决问题。</p>
-<p>在某一次将repo改为ssh地址后，我发现报错这里的FATAL改变了：</p>
-<p><img src="/2023/02/26/GitHub%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/2.png"></p>
-<p><img src="/2023/02/26/GitHub%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/3.png"></p>
-<p>根据FATAL的提示尝试了如下办法后部署成功：</p>
-<ol>
-<li><p>首先将_config.yml中repo改为ssh地址，</p>
-<p>branch根据视频弹幕将master改为main（成功后没有尝试这里改为master是否可以）；</p>
-</li>
-<li><p>git config全局变量user.name和user.email；</p>
-</li>
-<li><p>ping github.com，发现无法连接，全部丢包，根据<a target="_blank" rel="noopener" href="https://yinren.blog.csdn.net/article/details/127784355?spm=1001.2014.3001.5506">这篇博文</a>修改后连接成功；</p>
-</li>
-<li><p>生成新的SSH key，参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_33442844/article/details/78491777">博文</a></p>
-<p><code>ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</code></p>
-<p>回车回车，生成成功，找到该文件夹中公钥文件，粘贴至GitHub设置中SSH keys；</p>
-</li>
-</ol>
-<p>此时再操作hexo clean &amp; hexo g &amp; hexo d后部署至远端仓库成功。</p>
-<p>由于是小白，不太明白是哪一步是必须的，个人认为是第四步。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/02/26/GitHub%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-GoodGoodStudyDayDayUp" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2023/02/21/GoodGoodStudyDayDayUp/">Good Good Study Day Day Up</a>
+      <a class="archive-article-title" href="/2023/02/26/GitHub%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/">GitHub搭建Hexo博客</a>
     </h1>
   
 
-        
-        <a href="/2023/02/21/GoodGoodStudyDayDayUp/" class="archive-article-date">
+        <div class="article-info info-on-right">
+          
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2023/02/21/GoodGoodStudyDayDayUp/" class="archive-article-date">
   	<time datetime="2023-02-21T12:59:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-21</time>
 </a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="/2023/02/21/GoodGoodStudyDayDayUp/goodgoodstudy.jpg"></p>
-<p>在我困惑迷茫时这段话总是给予我前进的动力，谢谢翁恺老师。</p>
-<p>小王加油～</p>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2023/02/21/GoodGoodStudyDayDayUp/">Good Good Study Day Day Up</a>
+    </h1>
+  
 
-      
+        <div class="article-info info-on-right">
+          
+          
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/02/21/GoodGoodStudyDayDayUp/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
-    <article id="post-hello" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>title: hello<br>date: 2022-12-15 14:27:29<br>tags:</p>
-<h3 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World!"></a>Hello World!</h3>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/12/15/hello/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
 
 
           </div>
@@ -379,9 +241,9 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
-		isArchive: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
