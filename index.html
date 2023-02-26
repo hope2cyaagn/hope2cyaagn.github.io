@@ -172,7 +172,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>根据<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yb411a7ty/?spm_id_from=333.999.0.0">codesheep的搭建Hexo博客</a>一步一步搭建，由于都是macOS，一切都很顺利，但是在最后部署至GitHub仓库时出现报错：</p>
+        <p>跟着codesheep的<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yb411a7ty/?spm_id_from=333.999.0.0">搭建Hexo博客</a>一步一步搭建，由于都是macOS，一切都很顺利，但是在最后部署至GitHub仓库时出现报错：</p>
 <p><img src="/2023/02/26/GitHub%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/1.png"></p>
 <p>在这里尝试了很多次，一直过于关注高亮Error中的内容，尝试了搜到常用解决Spawn faild的办法：</p>
 <ul>
@@ -187,8 +187,7 @@
 <p><img src="/2023/02/26/GitHub%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/3.png"></p>
 <p>根据FATAL的提示尝试了如下办法后部署成功：</p>
 <ol>
-<li><p>首先将_config.yml中repo改为ssh地址，</p>
-<p>branch根据视频弹幕将master改为main（成功后没有尝试这里改为master是否可以）；</p>
+<li><p>首先将_config.yml中repo改为ssh地址，branch根据视频弹幕将master改为main（成功后没有尝试这里改为master是否可以）；</p>
 </li>
 <li><p>git config全局变量user.name和user.email；</p>
 </li>
