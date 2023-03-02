@@ -152,6 +152,73 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/02/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/favicon.png">
+      <meta itemprop="name" content="Diane Wang">
+      <meta itemprop="description" content="价格回归价值">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Diane's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/03/02/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" class="post-title-link" itemprop="url">error:cast from 'int*' to 'int' loses precision [-fpermissive] 的解决</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2023-03-02 16:37:45 / Modified: 16:44:51" itemprop="dateCreated datePublished" datetime="2023-03-02T16:37:45+08:00">2023-03-02</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>复习黑马C++&lt;内存分区模型&gt;，案例中需要将十六进制地址转换为十进制整型，</p>
+<p><strong>报错代码：</strong></p>
+<p><img src="/2023/03/02/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/1.png"></p>
+<p><strong>显示如下报错：</strong></p>
+<p><img src="/2023/03/02/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/2.png"></p>
+<p>查阅相关资料后发现是如下原因：</p>
+<p><img src="/2023/03/02/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/3.png"></p>
+<p><img src="/2023/03/02/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/4.png"></p>
+<p>所以将强制转换的类型改为8字节的<code>long</code>&#x2F;<code>long long</code>即可</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/26/GitHub%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -428,7 +495,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
