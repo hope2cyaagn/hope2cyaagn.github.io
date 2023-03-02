@@ -152,6 +152,70 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/02/Cpp%E9%9A%8F%E6%9C%BA%E6%95%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/favicon.png">
+      <meta itemprop="name" content="Diane Wang">
+      <meta itemprop="description" content="价格回归价值">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Diane's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/03/02/Cpp%E9%9A%8F%E6%9C%BA%E6%95%B0/" class="post-title-link" itemprop="url">C++随机数</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2023-03-02 16:47:47 / Modified: 16:49:50" itemprop="dateCreated datePublished" datetime="2023-03-02T16:47:47+08:00">2023-03-02</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>在进行猜数游戏时发现每次rand生成的随机数<code>int random = rand() % 100; </code>都是一样的，搜索后根据<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41410054/article/details/123271628">此博文</a>进行修改</p>
+<blockquote>
+<p>C++的随机数函数rand是一个伪随机数，从固定的初始种子计算得出。所以每次运行获取到的随机数序列是相同的。要解决这一问题，需要添加一个随机数种子，利用当前系统时间生成随机数</p>
+</blockquote>
+<p>修改方法为头文件增加<code>#include &lt;ctime&gt;</code></p>
+<p>main主函数增加<code>srand((unsigned int)time(NULL));</code></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/02/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -495,7 +559,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
