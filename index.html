@@ -175,10 +175,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2023-03-03 13:21:19 / Modified: 14:20:58" itemprop="dateCreated datePublished" datetime="2023-03-03T13:21:19+08:00">2023-03-03</time>
+              <time title="Created: 2023-03-03 13:21:19" itemprop="dateCreated datePublished" datetime="2023-03-03T13:21:19+08:00">2023-03-03</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-03-04 12:52:37" itemprop="dateModified" datetime="2023-03-04T12:52:37+08:00">2023-03-04</time>
+              </span>
 
           
 
@@ -198,14 +204,20 @@ img{
 </style>
 
 <h3 id="1-数组"><a href="#1-数组" class="headerlink" title="1.数组"></a>1.数组</h3><h4 id="1-704-二分查找"><a href="#1-704-二分查找" class="headerlink" title="1.704  二分查找"></a>1.704  二分查找</h4><p><img src="/2023/03/03/LeetCode%E5%81%9A%E9%A2%98%E8%AE%B0%E5%BD%95/1-704-1.png"> </p>
+<p>题目中给出<strong>有序数组</strong>&amp;&amp;<strong>无重复元素</strong>，这时应该想到使用<strong>二分法</strong>。</p>
+<p>主要关键点在于<code>while</code>中循环的条件，我习惯<code>[ ]</code>左闭右闭的原则，这样的话<code>while</code>中的条件应为<code>left &lt;= right</code>，循环体内为<code>left = mid + 1;</code>和<code>right = mid - 1;</code>。</p>
 <h4 id="1-27-移除元素"><a href="#1-27-移除元素" class="headerlink" title="1.27  移除元素"></a>1.27  移除元素</h4><p><img src="/2023/03/03/LeetCode%E5%81%9A%E9%A2%98%E8%AE%B0%E5%BD%95/1-27-1.png"></p>
 <p><img src="/2023/03/03/LeetCode%E5%81%9A%E9%A2%98%E8%AE%B0%E5%BD%95/1-27-2.png"></p>
-<h4 id="1-977-有序数组的平方"><a href="#1-977-有序数组的平方" class="headerlink" title="1.977  有序数组的平方"></a>1.977  有序数组的平方</h4><p><img src="/2023/03/03/LeetCode%E5%81%9A%E9%A2%98%E8%AE%B0%E5%BD%95/1-977-1.png"></p>
-<h4 id="1-209-长度最小的子数组"><a href="#1-209-长度最小的子数组" class="headerlink" title="1.209  长度最小的子数组"></a>1.209  长度最小的子数组</h4><p><img src="/2023/03/03/LeetCode%E5%81%9A%E9%A2%98%E8%AE%B0%E5%BD%95/1-209-1.png"></p>
-<p><img src="/2023/03/03/LeetCode%E5%81%9A%E9%A2%98%E8%AE%B0%E5%BD%95/1-209-2.png"></p>
-<h4 id="1-59-螺旋矩阵II"><a href="#1-59-螺旋矩阵II" class="headerlink" title="1.59  螺旋矩阵II"></a>1.59  螺旋矩阵II</h4><p><img src="/2023/03/03/LeetCode%E5%81%9A%E9%A2%98%E8%AE%B0%E5%BD%95/1-59-1.png"></p>
-<p><img src="/2023/03/03/LeetCode%E5%81%9A%E9%A2%98%E8%AE%B0%E5%BD%95/1-59-2.png"></p>
-
+<p>题目中要求<strong>不使用额外的数组空间</strong>&amp;&amp;<strong>原地修改数组</strong>，采用<strong>双指针法</strong>。</p>
+<p>定义两个指针<code>fast</code>和<code>slow</code>，初始都指向起始位置<code>0</code>，用快指针进行<code>for</code>循环遍历，若<code>arr[fast] != target</code>，那么赋值给慢指针<code>arr[slow] = arr[fast];</code>，慢指针为新数组的下标位置，最后返回<code>slow</code>。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/03/03/LeetCode%E5%81%9A%E9%A2%98%E8%AE%B0%E5%BD%95/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -319,7 +331,7 @@ img{
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-03-03 14:20:39" itemprop="dateModified" datetime="2023-03-03T14:20:39+08:00">2023-03-03</time>
+                <time title="Modified: 2023-03-04 12:54:06" itemprop="dateModified" datetime="2023-03-04T12:54:06+08:00">2023-03-04</time>
               </span>
 
           
@@ -338,17 +350,15 @@ img{
     width: 60%;
 }
 </style>
-
-<p>复习黑马C++&lt;内存分区模型&gt;，案例中需要将十六进制地址转换为十进制整型，</p>
-<p><strong>报错代码：</strong></p>
-<p><img src="/2023/03/02/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/1.png"></p>
-<p><strong>显示如下报错：</strong></p>
-<p><img src="/2023/03/02/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/2.png"></p>
-<p>查阅相关资料后发现是如下原因：</p>
-<p><img src="/2023/03/02/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/3.png"></p>
-<p><img src="/2023/03/02/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/4.png"></p>
-<p>所以将强制转换的类型改为8字节的<code>long</code>&#x2F;<code>long long</code>即可</p>
-
+<p>复习黑马C++&lt;内存分区模型&gt;，案例中需要将十六进制地址转换为十进制整型。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/03/02/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -390,10 +400,16 @@ img{
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2023-02-26 15:17:46 / Modified: 16:38:13" itemprop="dateCreated datePublished" datetime="2023-02-26T15:17:46+08:00">2023-02-26</time>
+              <time title="Created: 2023-02-26 15:17:46" itemprop="dateCreated datePublished" datetime="2023-02-26T15:17:46+08:00">2023-02-26</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-03-04 12:53:33" itemprop="dateModified" datetime="2023-03-04T12:53:33+08:00">2023-03-04</time>
+              </span>
 
           
 
@@ -410,31 +426,17 @@ img{
 <p><img src="/2023/02/26/GitHub%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/1.png"></p>
 <p>在这里尝试了很多次，一直过于关注高亮Error中的内容，尝试了搜到常用解决Spawn faild的办法：</p>
 <ul>
-<li><p>删除.deploy_git&#x2F;文件夹</p>
-</li>
-<li><p>_config.yml中repo改为ssh地址</p>
-</li>
+<li>删除.deploy_git&#x2F;文件夹</li>
+<li>_config.yml中repo改为ssh地址</li>
 </ul>
-<p>没有尝试强制上传的方法，但是以上两种方法后仍然Error：Spawn faild，都没有解决问题。</p>
-<p>在某一次将repo改为ssh地址后，我发现报错这里的FATAL改变了：</p>
-<p><img src="/2023/02/26/GitHub%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/2.png"></p>
-<p><img src="/2023/02/26/GitHub%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/3.png"></p>
-<p>根据FATAL的提示尝试了如下办法后部署成功：</p>
-<ol>
-<li><p>首先将_config.yml中repo改为ssh地址，branch根据视频弹幕将master改为main（成功后没有尝试这里改为master是否可以）；</p>
-</li>
-<li><p>git config全局变量user.name和user.email；</p>
-</li>
-<li><p>ping github.com，发现无法连接，全部丢包，根据<a target="_blank" rel="noopener" href="https://yinren.blog.csdn.net/article/details/127784355?spm=1001.2014.3001.5506">这篇博文</a>修改后连接成功；</p>
-</li>
-<li><p>生成新的SSH key，参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_33442844/article/details/78491777">博文</a></p>
-<p><code>ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</code></p>
-<p>回车回车，生成成功，找到该文件夹中公钥文件，粘贴至GitHub设置中SSH keys；</p>
-</li>
-</ol>
-<p>此时再操作hexo clean &amp; hexo g &amp; hexo d后部署至远端仓库成功。</p>
-<p>由于是小白，不太明白是哪一步是必须的，个人认为是第四步。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/02/26/GitHub%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
